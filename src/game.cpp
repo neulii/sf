@@ -8,9 +8,9 @@ int main()
 	bool active = false;
 
 
-	GreenCircle green(200,50,50);
+	GreenCircle green(200,50,100);
 	
-	sf::RenderWindow window(sf::VideoMode(500,200),"SFML works");
+	sf::RenderWindow window(sf::VideoMode(800,500),"SFML works");
 	sf::CircleShape shape(100.f);
 
 	shape.setFillColor(sf::Color::Green);
@@ -52,7 +52,7 @@ int main()
 			   		std::cout << green.checkCollision(event.mouseButton.x, event.mouseButton.y) << std::endl;
 			   		if(green.checkCollision(event.mouseButton.x, event.mouseButton.y))	
 						green.switchColor();
-
+						
 				}
 			}
 
