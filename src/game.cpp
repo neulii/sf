@@ -5,6 +5,9 @@
 int main()
 {
 	double n = 1;
+	bool active = false;
+
+
 	GreenCircle green(200,50,50);
 	
 	sf::RenderWindow window(sf::VideoMode(500,200),"SFML works");
@@ -47,8 +50,8 @@ int main()
 			        std::cout << "mouse y: " << event.mouseButton.y << std::endl;
 					*/
 			   		std::cout << green.checkCollision(event.mouseButton.x, event.mouseButton.y) << std::endl;
-			   		
-
+			   		if(green.checkCollision(event.mouseButton.x, event.mouseButton.y))	
+						green.switchColor();
 
 				}
 			}

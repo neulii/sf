@@ -34,3 +34,11 @@ bool GreenCircle::checkCollision(int x, int y)
 	collide = r->contains(x,y); 
 	return collide;	
 }
+
+void GreenCircle::switchColor()
+{
+	if(rect->getFillColor()==sf::Color::White)
+		rect->setFillColor(sf::Color::Red);
+	
+	else(rect->setFillColor(sf::Color::White));
+}

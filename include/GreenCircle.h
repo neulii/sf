@@ -17,6 +17,6 @@ class GreenCircle
 		GreenCircle(int radius,int xPosition, int yPosition);
 		void draw(sf::RenderWindow& window);
 		bool checkCollision(int x, int y);	
-
+		void switchColor();
 
 };
