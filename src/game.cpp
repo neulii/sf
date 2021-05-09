@@ -42,7 +42,15 @@ int main()
 
 			if (event.type == sf::Event::MouseButtonPressed)
 			{
-    			if (event.mouseButton.button == sf::Mouse::Left)
+				if (event.mouseButton.button == sf::Mouse::Right)
+				{
+					if(green.checkCollision(event.mouseButton.x, event.mouseButton.y))
+						green.switchColor(sf::Color::Blue);
+					else
+						green.switchColor(sf::Color::Red);
+
+				}
+				else if (event.mouseButton.button == sf::Mouse::Left)
     			{
 					/*
         			std::cout << "the right button was pressed" << std::endl;
@@ -52,7 +60,9 @@ int main()
 			   		std::cout << green.checkCollision(event.mouseButton.x, event.mouseButton.y) << std::endl;
 			   		if(green.checkCollision(event.mouseButton.x, event.mouseButton.y))	
 						green.switchColor();
-						
+					else 
+						green.switchColor(sf::Color::Red);
+
 				}
 			}
 

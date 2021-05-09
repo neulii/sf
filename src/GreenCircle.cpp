@@ -64,3 +64,8 @@ void GreenCircle::switchColor()
 	
 	else(shape->setFillColor(sf::Color::Green));
 }
+
+void GreenCircle::switchColor(sf::Color color)
+{
+	shape->setFillColor(color);
+}
