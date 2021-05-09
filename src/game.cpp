@@ -37,6 +37,8 @@ int main()
 
 		while(window.pollEvent(event))
 		{
+			green.clicked(window, event);
+
 			if(event.type ==sf::Event::Closed)
 				window.close();
 
@@ -57,7 +59,7 @@ int main()
 			        std::cout << "mouse x: " << event.mouseButton.x << std::endl;
 			        std::cout << "mouse y: " << event.mouseButton.y << std::endl;
 					*/
-			   		std::cout << green.checkCollision(event.mouseButton.x, event.mouseButton.y) << std::endl;
+			   		//std::cout << "collision:  " << green.checkCollision(event.mouseButton.x, event.mouseButton.y) << std::endl;
 			   		if(green.checkCollision(event.mouseButton.x, event.mouseButton.y))	
 						green.switchColor();
 					else 

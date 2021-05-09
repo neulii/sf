@@ -2,10 +2,10 @@ game: bin/game.o bin/GreenCircle.o
 	g++ bin/game.o bin/GreenCircle.o -o game -lsfml-graphics -lsfml-window -lsfml-system
 
 bin/game.o: src/game.cpp 
-	g++ -c src/game.cpp -I "include" -o bin/game.o
+	g++ -c src/game.cpp -I "include" -o bin/game.o -Wall -Wextra -pedantic
 
 bin/GreenCircle.o: src/GreenCircle.cpp 
-	g++ -c src/GreenCircle.cpp -I "include" -o bin/GreenCircle.o
+	g++ -c src/GreenCircle.cpp -I "include" -o bin/GreenCircle.o -Wall -Wextra -pedantic
 
 clean:
 	rm bin/*.o

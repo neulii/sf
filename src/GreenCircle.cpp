@@ -45,7 +45,7 @@ bool GreenCircle::checkCollision(int x, int y)
 	if(sqrt(xRel*xRel+yRel*yRel)<radius)
 	{
 		//is in circle
-		std::cout << "clicked in circle" << std::endl;
+//		std::cout << "clicked in circle" << std::endl;
 		collide = true;
 
 	}
@@ -56,7 +56,7 @@ bool GreenCircle::checkCollision(int x, int y)
 
 void GreenCircle::switchColor()
 {
-	std::cout << "switch color" << std::endl;
+//	std::cout << "switch color" << std::endl;
 
 
 	if(shape->getFillColor()==sf::Color::Green)
@@ -69,3 +69,13 @@ void GreenCircle::switchColor(sf::Color color)
 {
 	shape->setFillColor(color);
 }
+
+bool GreenCircle::clicked(sf::RenderWindow &window, sf::Event &event)
+{
+	if(checkCollision(sf::Mouse::getPosition(window).x,sf::Mouse::getPosition(window).y))
+	
+		if(event.type ==sf::Event::MouseButtonPressed)
+
+			std::cout << "mouse pressed" << "   button: " << event.mouseButton.button << std::endl;
+}
+	
