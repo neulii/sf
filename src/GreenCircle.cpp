@@ -70,12 +70,18 @@ void GreenCircle::switchColor(sf::Color color)
 	shape->setFillColor(color);
 }
 
-bool GreenCircle::clicked(sf::RenderWindow &window, sf::Event &event)
+int GreenCircle::clicked(sf::RenderWindow &window, sf::Event &event)
 {
+	int clickedButton = -1;
+
 	if(checkCollision(sf::Mouse::getPosition(window).x,sf::Mouse::getPosition(window).y))
 	
 		if(event.type ==sf::Event::MouseButtonPressed)
-
+		{
 			std::cout << "mouse pressed" << "   button: " << event.mouseButton.button << std::endl;
+			clickedButton = event.mouseButton.button;
+		}
+
+	return clickedButton;
 }
 	

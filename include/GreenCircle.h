@@ -19,6 +19,6 @@ class GreenCircle
 		bool checkCollision(int x, int y);	
 		void switchColor();
 		void switchColor(sf::Color color);
-		bool clicked(sf::RenderWindow & window, sf::Event & event);
+		int clicked(sf::RenderWindow & window, sf::Event & event);
 		
 };
